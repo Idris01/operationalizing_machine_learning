@@ -9,7 +9,7 @@ repo_name=devop_app
 if [[ $(docker images --format "table {{.Repository}}" | grep devop_app) = $repo_name ]]
 then
     # image exists so no need of creating another one
-    continue
+    echo "$repo_name repo found, skipping \"docker build\"\n"
 else
     docker build -t $repo_name .
     sleep 10
