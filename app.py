@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask.logging import create_logger
 import logging
 
@@ -25,7 +25,7 @@ def scale(payload):
 @app.route("/")
 def home():
     html = f"<h3>Sklearn Prediction Home</h3>"
-    return html.format(format)
+    return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -71,4 +71,4 @@ def predict():
 if __name__ == "__main__":
     # load pretrained model as clf
     clf = joblib.load("./model_data/boston_housing_prediction.joblib")
-    app.run(host='0.0.0.0', port=80, debug=True) # specify port=80
+    app.run(host='0.0.0.0', port=8000, debug=True) # specify port=80
