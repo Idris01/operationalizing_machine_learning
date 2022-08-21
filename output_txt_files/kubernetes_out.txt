@@ -1,0 +1,7 @@
+deployment.apps/prediction-app created
+NAME                              READY   STATUS              RESTARTS   AGE
+prediction-app-7d78dd6dcf-t9spc   0/1     ContainerCreating   0          1s
+
+NAME                              READY   STATUS    RESTARTS   AGE
+prediction-app-7d78dd6dcf-t9spc   1/1     Running   0          2m58s
+Forwarding from 0.0.0.0:8000 -> 80
