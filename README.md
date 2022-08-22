@@ -46,5 +46,12 @@ Then forward the container port to the host
 `kubectl port-forward <pod-name> --address 0.0.0.0 8000:80`
 
 ### Make Prediction
+There are two options to make use of the application
+* First with The Front end at `http://<base-url>`, when running locally the `base-url` is `localhost:<chosen-port>` e.g `http://127.0.0.1:8000` or `http://localhost:8000`
+* if localhost host is connected to the application on port `8000`
 
-Run the `./make_prediction.sh` and you can also read through the [make_prediction](./make_prediction.sh).
+![Prediction Page](./prediction.PNG)
+
+
+* Secondly, Run the `./make_prediction.sh` and you can also read through the [make_prediction](./make_prediction.sh).
+
