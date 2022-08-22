@@ -8,3 +8,8 @@ run_kubernetes.sh
 upload_docker.sh
 y
 y.pub
+aws
+token.txt
+*.pem
+kubectl
+aws-*

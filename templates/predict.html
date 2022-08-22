@@ -1,46 +1,46 @@
 
-<form class="container justify-content-center">
-   <div class="row mt-2">
-        <label for="rm" class="col-sm-2 col-md-1 col-form-label">RM</label>
+<form class="container d-block" id="predictor">
+   <div class="row mt-3 mb-3">
+        <label for="rm" class="col-sm-2 col-md-2 col-form-label text-info fs-5">RM:</label>
         <div class="col-sm-10 col-md-6">
-            <input type="number" step="any" class="form-control" id="rm" required>
-            <div class="form-text">average number of rooms per dwelling</div>
+            <input type="number" step="any" class="form-control" id="rm" name="rm" required>
+            <div class="form-text mt-0 fs-7">Average number of rooms per dwelling</div>
        </div>
   </div>
-  <div class="row mt-2">
-    <label for="chas" class="col-1 col-form-label">CHAS</label>
-    <div class="col-4">
-        <input type="number" step="any" class="form-control" id="chas" required>
-        <div class="form-text">Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</div>
+  <div class="row mt-3 mb-3">
+    <label for="chas" class="col-sm-2 col-md-2 col-form-label text-info fs-5">CHAS:</label>
+    <div class="col-sm-10 col-md-6">
+        <input type="number" step="any" class="form-control" id="chas" name="chas" required>
+        <div class="form-text mt-0">Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</div>
     </div>
   </div>
-  <div class="row mt-2">
-    <label for="ptratio" class="col-1 col-form-label">PTRATIO</label>
-     <div class="col-4">
-        <input type="number" step="any" class="form-control" id="ptratio" required>
-        <div class="form-text">pupil-teacher ratio by town</div>
+  <div class="row mt-3 mb-3">
+    <label for="ptratio" class="col-sm-2 col-md-2 col-form-label text-info fs-5">PTRATIO:</label>
+     <div class="col-sm-10 col-md-6">
+        <input type="number" step="any" class="form-control" id="ptratio" name="ptratio" required>
+        <div class="form-text mt-0">Pupil-teacher ratio by town</div>
     </div>
   </div>
-  <div class="row mt-2">
-    <label for="tax" class="col-1 col-form-label">TAX</label>
-    <div class="col-4">
-        <input type="number" step="any" class="form-control" id="tax" required>
-        <div class="form-text">full-value property-tax rate per $10,000</div>
+  <div class="row mt-3 mb-3">
+    <label for="tax" class="col-sm-2 col-md-2 col-form-label text-info fs-5">TAX:</label>
+    <div class="col-sm-10 col-md-6">
+        <input type="number" step="any" class="form-control" id="tax" name="tax" required>
+        <div class="form-text mt-0">Full-value property-tax rate per $10,000</div>
     </div>
   </div>
-  <div class="row mt-2">
-    <label for="b" class="col-1 col-form-label">B</label>
-    <div class="col-4">
-        <input type="number" step="any" class="form-control" id="b" required>
-        <div class="form-text">1000(Bk - 0.63)^2 where Bk is the proportion of black people by town</div>
+  <div class="row mt-3 mb-3">
+    <label for="b" class="col-sm-2 col-md-2 col-form-label text-info fs-5">B:</label>
+    <div class="col-sm-10 col-md-6 ">
+        <input type="number" step="any" class="form-control" id="b" name="b" required>
+        <div class="form-text mt-0">1000(Bk - 0.63)^2 where Bk is the proportion of black people by town</div>
      </div>
   </div>
-    <div class="row mt-2">
-    <label for="lstat" class="col-1 col-form-label">LSTAT</label>
-    <div class="col-4">
-        <input type="number" step="any" class="form-control" id="lstat" required>
-        <div class="form-text">% lower status of the population</div>
+    <div class="row mt-3 mb-3">
+    <label for="lstat" class="col-sm-2 col-md-2 col-form-label text-info fs-5">LSTAT:</label>
+    <div class="col-sm-10 col-md-6">
+        <input type="number" step="any" class="form-control" id="lstat" name="lstat" required>
+        <div class="form-text mt-0">% Lower status of the population</div>
     </div>
   </div>
-  <button type="submit" id="submit" class="btn btn-primary">Get Prediction</button>
+  <button type="submit" id="predict" class="btn btn-primary mt-3">Get Prediction</button>
 </form>

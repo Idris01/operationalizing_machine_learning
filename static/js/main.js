@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded",(evt)=>{
         let lstat = formData.get('lstat')
         
         let payLoad = {"CHAS":{"0":chas},"RM":{"0":rm},"TAX":{"0":tax},"PTRATIO":{"0":ptratio},"B":{"0":b},"LSTAT":{"0":lstat}};
-        console.log(payLoad);
         fetch('/predict',{
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded",(evt)=>{
         })
         .then(response =>response.json())
         .then(data => {
-            console.log(data.prediction[0])
             updatePrice(data.prediction[0])
         })
     };
