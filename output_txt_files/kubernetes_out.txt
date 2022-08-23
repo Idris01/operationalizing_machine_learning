@@ -18,3 +18,9 @@ Handling connection for 8000
 0     0  6.575  296.0     15.3  396.9   4.98
 [2022-08-23 07:53:25,838] INFO in app: Prediction Output:
 [20.35373177134412]
+
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
