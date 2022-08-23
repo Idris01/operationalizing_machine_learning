@@ -16,5 +16,5 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward pod/prediction-app-7d78dd6dcf-t9spc --address 0.0.0.0 8000:80
+kubectl port-forward pod/prediction-app-d4597d445-h4rvx --address 0.0.0.0 8000:80
 
