@@ -16,9 +16,20 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 	
-	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+	
+	which sudo &> sudo
+	export response=$? && rm sudo
+	
+	if [[ $response = "1" ]]
+	then
+		# no need for sudo
+		wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+		chmod +x /bin/hadolint
+	else
+		sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
 		sudo chmod +x /bin/hadolint
-
+	fi
+	
 test:
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
