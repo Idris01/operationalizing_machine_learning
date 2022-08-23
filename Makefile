@@ -19,10 +19,11 @@ install:
 	
 	which sudo &> sudo
 	
-	if [[ "$(cat response)" =~ "/bin/sudo" ]];then sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+	if [[ "$(cat sudo)" =~ "/bin/sudo" ]];then sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
 		sudo chmod +x /bin/hadolint; else wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
 		chmod +x /bin/hadolint; fi
-	
+		
+	rm sudo
 test:
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
