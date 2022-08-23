@@ -1,4 +1,4 @@
-[![CircleCI](https://github.com/Idris01/operationalizing_machine_learning/actions/workflows/config.yml/badge.svg)](https://app.circleci.com/pipelines/github/Idris01/operationalizing_machine_learning)
+[![CircleCI](https://github.com/Idris01/operationalizing_machine_learning/actions/workflows/Build/badge.svg)](https://app.circleci.com/pipelines/github/Idris01/operationalizing_machine_learning)
 
 # Operationalizing Machine Learning Microservice API.
 
